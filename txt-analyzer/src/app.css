@@ -1,0 +1,33 @@
+:root { font-family: 'Inter', system-ui, sans-serif; line-height: 1.5; color: #213547; background-color: #f8f9fa; }
+* { box-sizing: border-box; }
+
+body { margin: 0; display: flex; place-items: center; min-height: 100vh; justify-content: center; }
+.container { width: 100%; max-width: 800px; padding: 2rem; }
+
+header { text-align: center; margin-bottom: 2rem; }
+h1 { margin: 0; color: #2c3e50; letter-spacing: -1px; }
+.subtitle { color: #6c757d; margin-top: 0.5rem; font-size: 0.9rem; }
+
+.card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e9ecef; }
+textarea { width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #ced4da; font-family: monospace; resize: vertical; min-height: 150px; outline: none; transition: border-color 0.2s; }
+textarea:focus { border-color: #4dabf7; }
+
+.actions { display: flex; gap: 10px; margin-top: 1rem; }
+button { cursor: pointer; background-color: #228be6; color: white; border: none; padding: 0.8em 1.5em; font-weight: 600; border-radius: 6px; transition: background 0.2s; flex: 1; }
+button:hover { background-color: #1c7ed6; }
+button.secondary { background-color: #e9ecef; color: #495057; }
+button.secondary:hover { background-color: #dee2e6; }
+
+.results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+.stat-box { text-align: center; }
+.stat-box h3 { font-size: 0.85rem; text-transform: uppercase; color: #868e96; margin: 0; }
+.big-number { font-size: 2.5rem; font-weight: 800; color: #228be6; margin-top: 0.5rem; }
+
+.full-width { grid-column: 1 / -1; text-align: left; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.tag { background: #e7f5ff; color: #1864ab; padding: 6px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 8px; }
+.badge { background: white; padding: 2px 6px; border-radius: 10px; font-size: 0.75em; font-weight: bold; color: #1864ab; }
+
+@media (max-width: 600px) {
+    .results-grid { grid-template-columns: 1fr; }
+}
