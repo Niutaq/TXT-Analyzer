@@ -1,3 +1,4 @@
+// translations.jsx
 export const translations = {
   pl: {
     title: "Analizator Tekstu",
@@ -8,7 +9,8 @@ export const translations = {
     words: "Liczba słów",
     unique: "Unikalne",
     avgLen: "Średnia dł.",
-    topWords: "Najczęstsze słowa (Top 10)"
+    topWords: "Najczęstsze słowa (Top 10)",
+    bannedAlert: "⚠️ Wykryto słowa zakazane"
   },
   en: {
     title: "Text Analyzer",
@@ -19,6 +21,7 @@ export const translations = {
     words: "Word Count",
     unique: "Unique Words",
     avgLen: "Avg Length",
-    topWords: "Most Frequent (Top 10)"
+    topWords: "Most Frequent (Top 10)",
+    bannedAlert: "⚠️ Banned words detected"
   }
 };
