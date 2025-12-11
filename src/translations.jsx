@@ -1,4 +1,3 @@
-// translations.jsx
 export const translations = {
   pl: {
     title: "Analizator Tekstu",

@@ -1,4 +1,3 @@
-// src/app.jsx
 import { useState } from 'preact/hooks';
 import { analyzeText } from './core/analyzer';
 import { translations } from './translations';
@@ -50,7 +49,7 @@ export function App() {
 
       {results && (
         <div class="results-grid">
-        
+
         {}
         <div class="card stat-box">
             <h3>{t.words}</h3> {}
