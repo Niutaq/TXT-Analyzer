@@ -50,24 +50,25 @@ export function App() {
 
       {results && (
         <div class="results-grid">
+        
         {}
         <div class="card stat-box">
-            <h3>Liczba słów</h3>
+            <h3>{t.words}</h3> {}
             <div class="big-number">{results.general.totalWords}</div>
         </div>
         <div class="card stat-box">
-            <h3>Unikalne</h3>
+            <h3>{t.unique}</h3> {}
             <div class="big-number">{results.general.uniqueWords}</div>
         </div>
         <div class="card stat-box">
-            <h3>Średnia dł.</h3>
+            <h3>{t.avgLen}</h3> {}
             <div class="big-number">{results.general.avgLength}</div>
         </div>
 
         {}
         {results.banned.length > 0 && (
             <div class="card stat-box full-width" style={{background: '#fff5f5', border: '1px solid #ff8787'}}>
-                <h3 style={{color: '#c92a2a'}}>⚠️ Wykryto słowa zakazane</h3>
+                <h3 style={{color: '#c92a2a'}}>{t.bannedAlert}</h3> {}
                 <div class="tags" style={{justifyContent: 'center'}}>
                     {results.banned.map(word => (
                         <span class="tag" style={{background: '#ffe3e3', color: '#c92a2a'}}>
@@ -80,7 +81,7 @@ export function App() {
 
         {}
         <div class="card stat-box full-width">
-            <h3>Najczęstsze słowa (Top 10)</h3>
+            <h3>{t.topWords}</h3> {}
             <div class="tags">
             {results.frequency.map(([word, count]) => (
                 <span key={word} class="tag">
