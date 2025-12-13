@@ -1,20 +1,13 @@
 import { useState } from 'preact/hooks';
-import { analyzeText } from './core/analyzer';
+import { useTextAnalyzer } from './hooks/useTextAnalyzer';
 import { translations } from './translations';
 import './app.css';
 
 export function App() {
-  const [text, setText] = useState('');
-  const [results, setResults] = useState(null);
-
+  const { text, setText, results, handleAnalyze, clear } = useTextAnalyzer();
   const [lang, setLang] = useState('pl');
 
   const t = translations[lang];
-
-  const handleAnalyze = () => {
-    const data = analyzeText(text);
-    setResults(data);
-  };
 
   return (
     <div class="container">
@@ -43,7 +36,7 @@ export function App() {
         />
         <div class="actions">
             <button onClick={handleAnalyze}>{t.analyzeBtn}</button>
-            <button class="secondary" onClick={() => { setText(''); setResults(null); }}>{t.clearBtn}</button>
+            <button class="secondary" onClick={clear}>{t.clearBtn}</button>
         </div>
       </div>
 
